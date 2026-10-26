@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CineFrame - Discover movies, explore genres, rate films and build your personal watchlist."
+    >
+
+    <title>CineFrame | Movies, Reviews & Discovery</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+   
+
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-mark">
+                ▶
+            </span>
+
+            <span class="logo-text">
+                Cine<span>Frame</span>
+            </span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#movies">
+                All Movies
+            </a>
+
+            <a href="#genres">
+                Genres
+            </a>
+
+            <a href="#latest">
+                Latest
+            </a>
+
+            <a href="#watchlist">
+                Watchlist
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+           
+            <button
+                class="search-button"
+                id="searchButton"
+                aria-label="Open search"
+            >
+                ⌕
+            </button>
+
+
+          
+
+            <button
+                class="theme-button"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+            >
+                ☾
+            </button>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
+
+        <div class="search-container">
+
+            <button
+                class="close-search"
+                id="closeSearch"
+            >
+                ×
+            </button>
+
+
+            <p class="search-label">
+                SEARCH CINEFRAME
+            </p>
+
+
+            <h2>
+                Find your next movie.
+            </h2>
+
+
+            <div class="search-input-wrapper">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search movie name..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <p
+                class="search-message"
+                id="searchMessage"
+            ></p>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#movies">
+            All Movies
+        </a>
+
+        <a href="#genres">
+            Genres
+        </a>
+
+        <a href="#latest">
+            Latest
+        </a>
+
+        <a href="#watchlist">
+            Watchlist
+        </a>
+
+    </div>
+
+
+
+
+
+    <main>
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-overlay"></div>
+
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    FEATURED MOVIE · 2026
+                </p>
+
+
+                <h1>
+                    Stories that
+                    <span>stay with you.</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Discover movies worth watching, explore new
+                    releases, share your reviews and build your
+                    personal watchlist.
+                </p>
+
+
+                <div class="hero-meta">
+
+                    <span>
+                        ⭐ 8.9/10
+                    </span>
+
+                    <span>
+                        •
+                    </span>
+
+                    <span>
+                        English
+                    </span>
+
+                    <span>
+                        •
+                    </span>
+
+                    <span>
+                        Action · Drama
+                    </span>
+
+                </div>
+
+
+                <div class="hero-actions">
+
+                    <button
+                        class="primary-button"
+                        id="heroWatchButton"
+                    >
+                        ▶ Watch Now
+                    </button>
+
+
+                    <button
+                        class="secondary-button"
+                        id="heroDetailsButton"
+                    >
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-scroll">
+
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
+
+                <span>
+                    ↓
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+       
+
+        <section
+            class="movies-section"
+            id="movies"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Popular <span>Movies</span>
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#movies"
+                    class="view-all"
+                >
+                    View all →
+                </a>
+
+            </div>
+
+
+
+
+            <div
+                class="movie-grid"
+                id="movieGrid"
+            >
+
+
+            </div>
+
+        </section>
+
+
+
+       
+
+        <section
+            class="genres-section"
+            id="genres"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        EXPLORE BY MOOD
+                    </p>
+
+                    <h2>
+                        Choose a <span>Genre</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="genre-list">
+
+                <button
+                    class="genre-button active"
+                    data-genre="All"
+                >
+                    All
+                </button>
+
+                <button
+                    class="genre-button"
+                    data-genre="Action"
+                >
+                    Action
+                </button>
+
+                <button
+                    class="genre-button"
+                    data-genre="Comedy"
+                >
+                    Comedy
+                </button>
+
+                <button
+                    class="genre-button"
+                    data-genre="Drama"
+                >
+                    Drama
+                </button>
+
+                <button
+                    class="genre-button"
+                    data-genre="Romance"
+                >
+                    Romance
+                </button>
+
+                <button
+                    class="genre-button"
+                    data-genre="Thriller"
+                >
+                    Thriller
+                </button>
+
+                <button
+                    class="genre-button"
+                    data-genre="Horror"
+                >
+                    Horror
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        
+
+        <section
+            class="latest-section"
+            id="latest"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        JUST RELEASED
+                    </p>
+
+                    <h2>
+                        Latest <span>Movies</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="movie-grid"
+                id="latestMovieGrid"
+            >
+
+               
+
+            </div>
+
+        </section>
+
+
+
+
+        <section
+            class="watchlist-section"
+            id="watchlist"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        YOUR COLLECTION
+                    </p>
+
+                    <h2>
+                        My <span>Watchlist</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="watchlist-empty"
+                id="watchlistEmpty"
+            >
+
+                <div class="empty-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Your watchlist is empty
+                </h3>
+
+                <p>
+                    Save movies you want to watch later.
+                </p>
+
+            </div>
+
+
+            <div
+                class="movie-grid"
+                id="watchlistGrid"
+            >
+
+              
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo">
+
+                <span class="logo-mark">
+                    ▶
+                </span>
+
+                <span class="logo-text">
+                    Cine<span>Frame</span>
+                </span>
+
+            </a>
+
+
+            <p>
+                Discover movies.
+                Share your thoughts.
+                Find your next favorite.
+            </p>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 CineFrame
+            </span>
+
+            <span>
+                Built with HTML · CSS · JavaScript
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+  
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
